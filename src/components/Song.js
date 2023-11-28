@@ -1,16 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-function Song() {
+function Song({ tracks, id, song, artist, image, setlist, setSetlist, addSongToSetlist, deleteSong }) {
+    const [added, setAdded] = useState(false)
+
+    function handleSongClick() {
+        setAdded(!added)
+
+        addSongToSetlist(song, added)
+        
+
+    }
 
     return(
-        <div className="song" onClick={()=>console.log("Song clicked...")}>
-            <img src=""/>
+        <>
+        <div className="song" onClick={handleSongClick}>
+            <img src={image}/>
             <div className="song-info">
-                <h3>SONG</h3>
-                <h4>ARTIST</h4>
+                <h3>{song}</h3>
+                <h4>{artist}</h4>
             </div>
-            <button onClick={()=> console.log("Delete clicked...")}>X</button>
         </div>
+            <button id="delete-button" onClick={()=> deleteSong(id)}>X</button>
+        </>
     );
 }
 

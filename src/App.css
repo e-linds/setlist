@@ -64,7 +64,7 @@ h3, h4 {
     height: 10%;
     width: 100%;
     min-width: 100%;
-    margin-bottom: 1em;
+    margin-top: 1em;
 }
 
 .song-info { 
@@ -76,8 +76,11 @@ h3, h4 {
     object-fit:cover;
 }
 
-.song button {
-    margin-left: auto;
+#delete-button {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    
 }
 
 /**

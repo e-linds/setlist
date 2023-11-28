@@ -35,9 +35,13 @@ The base URL for your backend is: `http://localhost:3110`
 As a user, I should be able to:
 
 - See all the details of the songs rendered in `SongList`.
+// create a song tile component and render it within a map through the array. The tiles should originally live within the song list component
 - Add a song from the `SongList` to `Setlist` by clicking on it. The selected song should render in the `Setlist` component. The song can be added only **once**. The item **does not** disappear from the `SongList`.
+// create onClick events for the song tiles within songlist - when clicked, the component also appears on the setlist. 
 - Remove a song from `Setlist` by clicking on it. The song should disappear from the `Setlist` component.
+// create onclick event for the song tiles within set list too, similar to above. 
 - Remove a song forever </\3 by clicking the delete button at the bottom of the each `Song`. This should delete the song from both the backend and the frontend.
+// another onclick for the delete button. remove using fetch (delete) and also filtering through array. 
 
 ### Endpoints for Core Deliverables
 
